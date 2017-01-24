@@ -14,11 +14,11 @@ namespace ConsoleApplication1
                 case "+":
                     return x + y;
                 case "-":
-                    return x - y;
+                    return y - x;
                 case "*":
                     return x * y;
                 case "/":
-                    return x / y;
+                    return y / x;
             }
 
             return -0;

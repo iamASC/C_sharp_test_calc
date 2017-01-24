@@ -17,8 +17,9 @@ namespace ConsoleApplication1
             opPrior.Add('-', 10);
             opPrior.Add('*', 20);
             opPrior.Add('/', 20);
-            opPrior.Add('^', 30);
-            MakePostRec(input);
+            input = input.Replace('.', ',');
+            if (VerifyInput(input))
+                MakePostRec(input);
         }
 
         void MakePostRec(String input)
@@ -50,6 +51,17 @@ namespace ConsoleApplication1
         public String Val()
         {
             return rec;
+        }
+
+        bool VerifyInput(String input)
+        {
+            if (input.Length == 0)
+            {
+                Console.WriteLine("Your expression is empty!");
+                return false;
+            }
+            return true;
+            
         }
     }
 }
