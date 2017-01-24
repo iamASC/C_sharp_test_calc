@@ -31,6 +31,11 @@ namespace ConsoleApplication1
         {
             Test("123 + 3,14 * 6666", "123 3,14 6666 * +");
         }
+
+        public void Test3()
+        {
+            Test("(1.2+3,14)*(134+65)-1", "1.2 3,14 + 134 65 + * 1 -");
+        }
            
 
     }

@@ -13,6 +13,7 @@ namespace ConsoleApplication1
             PostRecFirstTest test = new PostRecFirstTest();
             test.Test1();
             test.Test2();
+            test.Test3();
         }
     }
 }

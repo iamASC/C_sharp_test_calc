@@ -44,7 +44,7 @@ namespace ConsoleApplication1
                             break;
                         if (stck.Peek() == '(' || opPrior[stck.Peek()] < opPrior[x])
                             break;
-                        rec += " " + stck.Pop();
+                        rec += stck.Pop() + " ";
                     }
                     stck.Push(x);
                 }
