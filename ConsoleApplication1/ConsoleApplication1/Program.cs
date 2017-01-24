@@ -17,6 +17,9 @@ namespace ConsoleApplication1
 
             MathProcedureTest test2 = new MathProcedureTest();
             test2.MathTest();
+
+            ResolverTest test3 = new ResolverTest();
+            test3.Test();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace ConsoleApplication1
         public void Test()
         {
             Resolver test = new Resolver();
-            Console.WriteLine("1+2+3={0}", test.solve("1+2+3"));
+            Console.WriteLine("1+2+3={0}", test.Solve("1+2+3"));
         }
     }
 }

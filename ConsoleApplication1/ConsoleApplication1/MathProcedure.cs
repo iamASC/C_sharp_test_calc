@@ -8,17 +8,17 @@ namespace ConsoleApplication1
 {
     class MathProcedure
     {
-        public static double BinaryProcedure(string x, string y, string sign)
+        public static double BinaryProcedure(double x, double y, string sign)
         {
             switch (sign){
                 case "+":
-                    return Double.Parse(x) + Double.Parse(y);
+                    return x + y;
                 case "-":
-                    return Double.Parse(x) - Double.Parse(y);
+                    return x - y;
                 case "*":
-                    return Double.Parse(x) * Double.Parse(y);
+                    return x * y;
                 case "/":
-                    return Double.Parse(x) / Double.Parse(y);
+                    return x / y;
             }
 
             return -0;
