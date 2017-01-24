@@ -25,32 +25,33 @@ namespace ConsoleApplication1
         {
             Stack<char> stck = new Stack<char>();
             foreach (char x in input){
-                if (Char.IsDigit(x))
-                    rec += x+" ";
+                if (Char.IsDigit(x) || x == '.' || x == ',')
+                    rec += x;
                 else if (x == '(')
                     stck.Push(x);
                 else if (x == ')')
                 {
                     while (stck.Peek()!='(')
-                        rec+=stck.Pop()+" ";
+                        rec+=" " + stck.Pop();
                     stck.Pop();
                 }
                 else if (opPrior.ContainsKey(x))
                 {
+                    rec += " ";
                     while(true)
                     {
                         if (stck.Count() == 0)
                             break;
                         if (stck.Peek() == '(' || opPrior[stck.Peek()] < opPrior[x])
                             break;
-                        rec += stck.Pop()+" ";
+                        rec += " " + stck.Pop();
                     }
                     stck.Push(x);
                 }
             }
             while (stck.Count() > 1)
-                rec += stck.Pop()+" ";
-            rec += stck.Pop();
+                rec += " "+stck.Pop();
+            rec += " "+stck.Pop();
         }
         
 
