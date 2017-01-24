@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MathProcedure.cs" />
+    <Compile Include="MathProcedureTest.cs" />
     <Compile Include="PostRec.cs" />
     <Compile Include="PostRecTest.cs" />
     <Compile Include="Program.cs" />
