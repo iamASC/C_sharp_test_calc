@@ -11,8 +11,8 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             PostRecFirstTest test = new PostRecFirstTest();
-            test.SimpleTest();
-
+            test.Test1();
+            test.Test2();
         }
     }
 }

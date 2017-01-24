@@ -8,10 +8,8 @@ namespace ConsoleApplication1
 {
     class PostRecFirstTest
     {
-        public void SimpleTest()
+        void Test(String input, String res)
         {
-            String input = "1 + 2 * 3";
-            String res = "1 2 3 * +";
             PostRec test = new PostRec(input);
             Console.WriteLine(test.Val());
             if (test.Val() != res)
@@ -22,6 +20,16 @@ namespace ConsoleApplication1
             {
                 System.Console.WriteLine("Test Passed");
             }
+        }
+
+        public void Test1()
+        {
+            Test("1 + 2 * 3", "1 2 3 * +");
+        }
+
+        public void Test2()
+        {
+            Test("123 + 3,14 * 6666", "123 3,14 6666 * +");
         }
            
 
