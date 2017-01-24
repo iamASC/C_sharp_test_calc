@@ -38,23 +38,15 @@ namespace ConsoleApplication1
                 else if (opPrior.ContainsKey(x))
                 {
                     rec += " ";
-                    while(true)
-                    {
-                        if (stck.Count() == 0)
-                            break;
-                        if (stck.Peek() == '(' || opPrior[stck.Peek()] < opPrior[x])
-                            break;
+                    while (stck.Count() > 0 && stck.Peek() != '(' && opPrior[stck.Peek()] >= opPrior[x])
                         rec += stck.Pop() + " ";
-                    }
                     stck.Push(x);
                 }
             }
-            while (stck.Count() > 1)
+            while (stck.Count() != 0)
                 rec += " "+stck.Pop();
-            rec += " "+stck.Pop();
         }
         
-
         public String Val()
         {
             return rec;
